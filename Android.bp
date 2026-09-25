@@ -4,6 +4,7 @@
 
 soong_namespace {
     imports: [
+        "device/sony/poplardcm",
         "device/sony/yoshino-common",
         "hardware/qcom-caf/msm8998",
         "vendor/sony/yoshino-common",
@@ -49,6 +50,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/android.hardware.nfc@1.2-service-cxd22xx",
             ],
             shared_libs: [
+                "libnfc_hal_shim",
                 "libbase",
                 "libcutils",
                 "libhardware",
